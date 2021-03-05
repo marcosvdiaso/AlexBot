@@ -41,7 +41,11 @@ client.on("message", function(message) {
 
     //command help
     if (command === "help") { // checks if the message says "help"
-        message.author.send(`https://github.com/mechzzzz/AlexBot/blob/main/README.md`);                       
+        const helpEmbed = new Discord.MessageEmbed()
+	.setColor('#F11111')
+	.setTitle('Comandos')
+	.setDescription(`help, ping, random, author, imgay, server, myinfo, avatar`)
+    message.channel.send(helpEmbed);                       
     }
 
     //command server
