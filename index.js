@@ -1,9 +1,8 @@
 const Discord = require("discord.js");
 const config = require("./config.json");
 const client = new Discord.Client();
-const prefix = "+"; // bot prefix is +
+const prefix = "alex "; // bot prefix is +
 const keepAlive = require('./server');
-
 
 client.on("message", function(message) { 
     if (message.author.bot) return;
