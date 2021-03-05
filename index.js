@@ -18,33 +18,64 @@ client.on("message", function(message) {
         message.reply(`Pong! Essa mensagem tem uma latência de ${timeTaken}ms.`);                       
     } 
     
-    //command random number
-    if (command === "random") { // checks if the message says "random"
-        const number = Math.random(); // generates a random number
-        message.reply(`wtf? ${number}.`);                       
+    //command responda
+    if (command === "responda") { // checks if the message says "responda"
+        const messages = ["é verdade!", "é mentira!", "não tenho certeza...", "me recuso a responder, seu babaca!", "kkkkkkkkk que porra é essa", "pergunta pra tony", "uau, dessa eu não sabia", "pesquisa no google", "google.com", "?"]
+
+				const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+
+        message.reply(`${randomMessage}`);                       
     } 
 
-    //command author
-    if (command === "author") { // checks if the message says "author"
-        message.reply(`https://twitter.com/mechzzzz`);                       
+		//command penis
+    if (command === "penis") { // checks if the message says "penis"
+        const peniz = ["8D", "8=D", "8==D", "8===D", "8====D", "8=====D", "8======D", "8=======D", "8===========D", "(|)", "8==================D"]
+
+				const randomPenis = peniz[Math.floor(Math.random() * peniz.length)];
+
+				const penisEmbed = new Discord.MessageEmbed()
+				.setColor('#7BD195')
+				.setTitle('d20 big but penis')
+				.setDescription(`${randomPenis}`)
+ 			   message.channel.send(penisEmbed);                     
+    } 
+
+    //command autor
+    if (command === "autor") { // checks if the message says "autor"
+        message.reply(`https://twitter.com/mechzzzz\nhttps://github.com/mechzzzz`);                       
     }
 
-     //command i'm gay
-     if (command === "imgay") { // checks if the message says "imgay"
+		//command vsf!
+    if (command === "vsf!") { // checks if the message says "vsf!"
+        message.reply(`vai você seu arrombado!`);                       
+    }
+
+     //command sougay?
+     if (command === "sougay?") { // checks if the message says "sougay?"
         const gaynumber = Math.floor(Math.random() * 100) + 1 + '%'
         const gayEmbed = new Discord.MessageEmbed()
 	.setColor('#F13710')
-	.setTitle('gay?')
+	.setTitle('Deixa eu ver...')
 	.setDescription(`Você é ${gaynumber} gay :gay_pride_flag:`)
     message.channel.send(gayEmbed);                     
     }
 
-    //command help
-    if (command === "help") { // checks if the message says "help"
+		     //command waifu
+     if (command === "waifu") { // checks if the message says "waifu"
+        const waifunumber = Math.floor(Math.random() * 100) + 1
+        const waifuEmbed = new Discord.MessageEmbed()
+	.setColor('#F13710')
+	.setTitle('wtf?')
+	.setDescription(`Você é ${waifunumber}/100 waifu :purple_heart:`)
+    message.channel.send(waifuEmbed);                     
+    }
+
+    //command ajuda
+    if (command === "ajuda") { // checks if the message says "ajuda"
         const helpEmbed = new Discord.MessageEmbed()
 	.setColor('#F11111')
 	.setTitle('Comandos')
-	.setDescription(`help, ping, random, author, imgay, server, myinfo, avatar`)
+	.setDescription(`ajuda, ping, autor, sougay?, server, myinfo, avatar, vsf!, responda, penis, waifu`)
     message.channel.send(helpEmbed);                       
     }
 
