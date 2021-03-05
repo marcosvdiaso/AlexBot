@@ -1,0 +1,22 @@
+{
+  "name": "alexbot",
+  "version": "1.0.0",
+  "description": "wtf! this is alexbot.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/mechzzzz/AlexBot"
+  },
+  "keywords": [
+    "alexbot"
+  ],
+  "author": "Marcos Dias",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "express": "^4.17.1"
+  }
+}
