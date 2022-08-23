@@ -1,10 +1,11 @@
 const Discord = require("discord.js");
 const config = require("./config.json");
 const client = new Discord.Client();
-const prefix = "alex "; // bot prefix is +
+const prefix = "alex "; // bot prefix is alex
 const keepAlive = require('./server');
 
-client.on("message", function(message) { 
+client.on("message", function(message)
+  { 
     if (message.author.bot) return;
     if (!message.content.startsWith(prefix)) return;
     
@@ -17,14 +18,14 @@ client.on("message", function(message) {
         const timeTaken = Date.now() - message.createdTimestamp;
         message.reply(`Pong! Essa mensagem tem uma latência de ${timeTaken}ms.`);                       
     } 
-    
-    //command responda
-    if (command === "responda") { // checks if the message says "responda"
-        const messages = ["é verdade!", "é mentira!", "não tenho certeza...", "me recuso a responder, seu babaca!", "kkkkkkkkk que porra é essa", "pergunta pra tony", "uau, dessa eu não sabia", "pesquisa no google", "google.com", "?"]
 
-				const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+		    //command cringe
+    if (command === "cringe") { // checks if the message says "cringe"
+        const cringe = ["icaro é cringe!", "bolsonaro é cringe!", "naldo é cringe"]
 
-        message.reply(`${randomMessage}`);                       
+				const cringeMessage = cringe[Math.floor(Math.random() * cringe.length)];
+
+        message.reply(`${cringeMessage}`);                       
     } 
 
 		//command penis
@@ -42,13 +43,10 @@ client.on("message", function(message) {
 
     //command autor
     if (command === "autor") { // checks if the message says "autor"
-        message.reply(`https://twitter.com/mechzzzz\nhttps://github.com/mechzzzz`);                       
-    }
-
-		//command vsf!
-    if (command === "vsf!") { // checks if the message says "vsf!"
-        message.reply(`vai você seu arrombado!`);                       
-    }
+        message.reply(`https://twitter.com/marcosvdiaso\nhttps://github.com/marcosvdiaso`);         
+	     
+}
+			     
 
      //command sougay?
      if (command === "sougay?") { // checks if the message says "sougay?"
@@ -60,6 +58,26 @@ client.on("message", function(message) {
     message.channel.send(gayEmbed);                     
     }
 
+     //command souracist?
+     if (command === "souracist?") { // checks if the message says "souracist?"
+        const racnumber = Math.floor(Math.random() * 100) + 1 + '%'
+        const racEmbed = new Discord.MessageEmbed()
+	.setColor('#F55000')
+	.setTitle('Estou analisando seu arrombado...')
+	.setDescription(`Você é ${racnumber} racista!`)
+    message.channel.send(racEmbed);                     
+    }
+
+     //command soumachist?
+     if (command === "soumachist?") { // checks if the message says "soumachist?"
+        const machnumber = Math.floor(Math.random() * 100) + 1 + '%'
+        const machEmbed = new Discord.MessageEmbed()
+	.setColor('#000000')
+	.setTitle('Você é uma escória...')
+	.setDescription(`Você é ${machnumber} machista!`)
+    message.channel.send(machEmbed);                     
+    }
+
 		     //command waifu
      if (command === "waifu") { // checks if the message says "waifu"
         const waifunumber = Math.floor(Math.random() * 100) + 1
@@ -69,14 +87,24 @@ client.on("message", function(message) {
 	.setDescription(`Você é ${waifunumber}/100 waifu :purple_heart:`)
     message.channel.send(waifuEmbed);                     
     }
+    
+        //command fudendo
+    if (command === "fudendo?") {
+    	var images = ["https://i.imgur.com/XSADSvS.jpg", "https://i.imgur.com/QxqIBsp.jpg", "https://i.imgur.com/KhyNazU.jpg"];
+    	var image = Math.floor(Math.random() * images.length);
+    	const memeEmbed = new Discord.MessageEmbed()
+    	.setColor('#FFC0CB')
+    	.setImage(String([images[image]]))
+    	message.channel.send(memeEmbed);
+  }
 
     //command ajuda
     if (command === "ajuda") { // checks if the message says "ajuda"
         const helpEmbed = new Discord.MessageEmbed()
 	.setColor('#F11111')
 	.setTitle('Comandos')
-	.setDescription(`ajuda, ping, autor, sougay?, server, myinfo, avatar, vsf!, responda, penis, waifu`)
-    message.channel.send(helpEmbed);                       
+	.setDescription(`ajuda, ping, autor, sougay?, server, myinfo, avatar, responda(esse comando tá incompleto, que mitada), penis, waifu, souracist?, soumachist?, cringe, fudendo?`)
+    message.channel.send(helpEmbed);
     }
 
     //command server
@@ -123,6 +151,15 @@ client.on("message", function(message) {
             message.channel.send(emb)
         }
 }
+
+    //command responda
+    if (command === "responda") { // checks if the message says "responda"
+        const messages = ["é verdade!", "é mentira!", "não tenho certeza...", "me recuso a responder, seu babaca!", "kkkkkkkkk que porra é essa", "pergunta pra tony", "uau, dessa eu não sabia", "pesquisa no google", "google.com", "?"]
+
+				const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+
+        message.reply(`${randomMessage}`);                       
+    } 
 
 }); 
 

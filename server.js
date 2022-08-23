@@ -3,7 +3,7 @@ const server = express();
 module.exports = keepAlive;
 
 server.all('/', (req, res)=>{
-    res.send('Your bot is alive!')
+    res.send('Tony!')
 })
 
 function keepAlive(){
